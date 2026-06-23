@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-23T09:56:18.580Z",
+  "files": [
+    {
+      "path": ".claude/skills/hello-prime/SKILL.md",
+      "sha256": "1866c321a1f20d429ffe7f9cedb919cef8195f439dff907c5b2d79b6ea144fd3",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/hello-prime/SKILL.md"
+    }
+  ]
+}
