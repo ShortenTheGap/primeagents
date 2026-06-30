@@ -1,0 +1,77 @@
+# {{LOOP_NAME}} — Trigger Definition
+
+> The launch contract for this loop on **Prime Agent Desk**. It states what the
+> loop is trying to achieve, where its state lives, and exactly how it starts —
+> as a machine-readable block the desk's Loop Runtime parses.
+
+---
+
+## Verifiable goal
+
+The loop stops when this predicate holds:
+
+> **{{GOAL}}**
+
+Every run checks this predicate after the verifier passes. If it holds, the loop
+writes a final summary to the state file and exits cleanly.
+
+---
+
+## State file
+
+```
+{{STATE_PATH}}
+```
+
+Every run reads this file at startup and writes it before stopping. If the file
+is missing or empty, treat it as a first run and initialize the ledger before
+taking any action.
+
+---
+
+## Trigger (machine-readable — the runtime reads this)
+
+Exactly one `loop-trigger` block. On this host only two modes are honourable —
+the desk must be open and the laptop awake for either to advance (there is no
+wake-from-sleep schedule). Keep **one** of the two blocks below and delete the
+other.
+
+**Run until done** — iterate back-to-back until the goal predicate holds:
+
+```loop-trigger
+mode: run-until-done
+```
+
+**Interval** — fire every N minutes *while the desk is open* (a missed interval
+coalesces to a single catch-up tick on relaunch, never a replayed backlog):
+
+```loop-trigger
+mode: interval
+interval_minutes: {{INTERVAL_MINUTES}}
+```
+
+---
+
+## Running it
+
+- **With the Loop Runtime enabled:** the runtime reads the `loop-trigger` block
+  and drives the loop — act → verify → update state — enforcing the
+  `loop-budget` in `HUMAN-GATES.md` and pausing at every gate.
+- **Without the Loop Runtime (or to run one iteration by hand):** open the loop
+  in the desk and say *"run one iteration of the {{LOOP_NAME}} loop"* — the
+  agent reads `{{STATE_PATH}}` and the loop's `SKILL.md`, does a single pass, runs
+  `verifier.sh`, and updates the state. It will not continue on its own.
+
+See `references/host-prime-agent-desk.md` for how the runtime maps onto the desk.
+
+---
+
+## Trigger notes
+
+- The budget / stop limits in `HUMAN-GATES.md` take precedence over any interval.
+  If the loop hits its iteration, token, or time cap, it halts regardless of how
+  often the trigger fires.
+- Before enabling an automated trigger, confirm `HUMAN-GATES.md` gates G1
+  (pre-run sign-off) and G2 (verifier anomaly) are in place.
+- `interval_minutes` only applies when `mode: interval`; omit it for
+  `run-until-done`.
