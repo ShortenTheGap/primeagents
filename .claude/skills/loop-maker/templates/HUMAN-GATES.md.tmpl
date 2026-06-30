@@ -18,7 +18,7 @@ waits — nothing irreversible runs unattended.
 |---|------|-------------------|--------------|
 | G1 | Pre-run sign-off | Before the very first live run on real data | Student |
 | G2 | Verifier anomaly | Verifier returns exit 1 on any iteration | Student |
-| G3 | Apply outside `work/` | Before writing/moving anything outside the loop's `work/` scratch dir | Student |
+| G3 | Write outside targets | Before writing, moving, or deleting anything outside the loop's declared target paths (and its `work/` scratch) | Student |
 | G4 | Send / publish | Before sending a message, email, notification, or publishing externally | Student |
 | G5 | Spend / bill | Before any action that incurs external cost (paid API, cloud resource) | Student |
 | G6 | Delete / overwrite | Before deleting files or overwriting data that cannot be recovered | Student |
@@ -28,6 +28,13 @@ Add loop-specific gates below G6 as needed.
 Remove any row that genuinely does not apply, but do NOT remove G1 or G2 —
 those two are unconditional.
 -->
+
+**Always pause for these — never run them unattended:** credentials / accounts /
+API keys · payments or anything that costs money · production data or destructive
+operations · legal / medical / financial judgements · copyrighted or licensed
+assets · publishing, deploying, or pushing to a shared branch · anything where
+ownership or direction is unclear. Low-risk uncertainty is not a gate — make a
+sensible assumption and record it instead of stalling.
 
 ### How a gate clears
 
@@ -47,9 +54,10 @@ These limits are **hard stops**, not suggestions. When any limit is reached, the
 loop halts immediately, writes a `budget-exceeded` status to `{{STATE_PATH}}`,
 and waits for the student to raise the budget or mark the loop done.
 
-Set at least one of the three keys. An unset key is ignored (no limit on that
-dimension), so leaving all three blank means **no budget** — which is not
-allowed. Fill in concrete numbers at scaffold time.
+**Delete the keys you are not setting and keep at least one**, with a concrete
+number. An omitted key means "no limit on that dimension"; omitting all three
+means no budget, which is not allowed. (The template lists all three as a menu —
+trim it down.)
 
 ```loop-budget
 max_iterations: {{MAX_ITERATIONS}}

@@ -33,6 +33,26 @@ The boundary is simple: if a value changes between runs, it goes in
 
 ---
 
+## Targets (the only paths this loop may write)
+
+The loop is allowed to create, modify, or delete **only** these paths (plus its
+own `work/` scratch). Anything else is a human gate.
+
+{{TARGET_PATHS}}
+
+## Verifier
+
+Each iteration calls the verifier after acting, and only advances on exit 0:
+
+```
+{{VERIFIER_CALL}}
+```
+
+Exit 0 = this attempt passed (advance). Exit 1 = it did not (halt, surface for
+review). A missing or non-executable verifier is treated as a failure.
+
+---
+
 ## Pattern: {{PATTERN}}
 
 The loop follows the **{{PATTERN}}** pattern. Each iteration proceeds in order:
@@ -62,9 +82,12 @@ and ask the agent to *"run one iteration of the {{LOOP_NAME}} loop"* — it read
 `{{STATE_PATH}}` and this file, does one pass, runs the verifier, and updates the
 state without continuing on its own. See `TRIGGER.md`.
 
-Any file-creating or file-modifying action runs in the loop's `work/` scratch
-directory; the result is promoted out only after the verifier passes, so a failed
-iteration never pollutes the student's folder.
+The loop may only write to its **declared targets** (see the Targets section
+below) plus its `work/` scratch. When an iteration builds a *new* artifact, stage
+it in `work/` and promote it into a target only after the verifier passes — so a
+failed iteration never leaves a bad partial behind. When an iteration edits an
+existing target file in place, the verifier checks that target's final state
+directly. Writing anywhere outside the targets is a human gate (G3).
 
 Before the first live run:
 1. Confirm `{{STATE_PATH}}` exists and is initialized (empty table, current
