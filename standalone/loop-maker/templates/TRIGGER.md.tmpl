@@ -1,0 +1,89 @@
+# {{LOOP_NAME}} — Trigger Definition
+
+> The launch contract for this loop. It states what the loop is trying to
+> achieve, where its state lives, and exactly how it starts — as a
+> machine-readable block a runner (or Prime Agent Desk's Loop Runtime) parses.
+
+---
+
+## Verifiable goal
+
+The loop stops when this predicate holds:
+
+> **{{GOAL}}**
+
+Every run checks this predicate after the verifier passes. If it holds, the loop
+writes a final summary to the state file and exits cleanly.
+
+---
+
+## State file
+
+```
+{{STATE_PATH}}
+```
+
+Every run reads this file at startup and writes it before stopping. If the file
+is missing or empty, treat it as a first run and initialize the ledger before
+taking any action.
+
+---
+
+## Trigger (machine-readable — the runtime reads this)
+
+Exactly one `loop-trigger` block. Two modes. How each is driven depends on your
+runner (see "Running it" below). Keep **one** of the two blocks below and delete
+the other.
+
+**Run until done** — iterate back-to-back until the goal predicate holds:
+
+```loop-trigger
+mode: run-until-done
+```
+
+**Interval** — fire every N minutes when a runner invokes it (`/loop` while your
+session is open, or cron/`/schedule` for scheduled cold-start runs):
+
+```loop-trigger
+mode: interval
+interval_minutes: {{INTERVAL_MINUTES}}
+```
+
+---
+
+## Running it
+
+This loop does not start on its own — pick a runner:
+
+- **Interval, while your session is open:** `/loop <interval> run one iteration of
+  the loops/{{LOOP_NAME}} loop`.
+- **Scheduled cold-start (e.g. every morning):** `/schedule`, or an OS cron entry
+  calling `claude -p "run one iteration of the loops/{{LOOP_NAME}} loop, honoring
+  HUMAN-GATES.md"`. Do NOT put irreversible-gate loops behind an unattended cron.
+- **Run until done, unattended:** a shell loop —
+  `until ./loops/{{LOOP_NAME}}/verifier.sh; do claude -p "run one iteration of the
+  loops/{{LOOP_NAME}} loop"; done` — with your own iteration cap matching
+  `max_iterations`.
+- **Manually, one pass:** say *"run one iteration of the {{LOOP_NAME}} loop"* — the
+  agent reads `{{STATE_PATH}}` and the loop's `SKILL.md`, does a single pass, runs
+  `verifier.sh`, updates state, and stops.
+
+Each pass reads `{{STATE_PATH}}`, does one action, runs `verifier.sh`, writes state,
+and **stops at any gate in `HUMAN-GATES.md`**. There is no runtime enforcing the
+budget — your runner's cap is the backstop.
+
+See `references/host-claude-code.md` for exact runner commands. (This same
+`loop-trigger` block is what Prime Agent Desk's Loop Runtime reads, so the loop
+also runs there unchanged.)
+
+---
+
+## Trigger notes
+
+- The budget / stop limits in `HUMAN-GATES.md` take precedence over any interval.
+  If the loop hits its iteration, token, or time cap, it halts regardless of how
+  often the trigger fires.
+- Before enabling an automated trigger, confirm `HUMAN-GATES.md` gates G1
+  (pre-run sign-off) and G2 (verifier anomaly) are in place.
+- `interval_minutes` only applies when `mode: interval`; omit it for
+  `run-until-done`.
