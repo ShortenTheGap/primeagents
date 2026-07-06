@@ -220,6 +220,17 @@ goal is unmet — as a hard stop, not a suggestion. Capture at least one of:
 forever and drain the student's usage. **If the student skips this, do not
 scaffold — collect it first.**
 
+**Set `max_iterations` as the primary dial.** In a real agent vault each
+iteration reloads the whole context (CLAUDE.md + memory + skills) through cache,
+so a single iteration typically costs **~150,000–200,000 tokens** — not the tiny
+number an empty test loop suggests. Two consequences: (1) pick `max_iterations`
+first (e.g. 5–25) — it's the only cap that can't overshoot, since it advances
+only on a completed turn; (2) if you set `max_tokens`, make it a **generous
+runaway backstop** (think millions, not hundreds of thousands), or it will trip
+after one or two iterations before the loop can reach its goal. `max_tokens` and
+`max_minutes` are checked at iteration boundaries, so either can overshoot by up
+to one iteration's worth.
+
 ---
 
 ## Phase 2 — Survey reuse (two passes)
@@ -319,12 +330,14 @@ runtime as a failure (fail-closed), never as a pass.
 
 **Machine-readable budget** — written into `HUMAN-GATES.md` exactly so the Loop
 Runtime can parse and enforce it. **Keep only the keys you're setting and delete
-the rest; at least one is required** (the example shows all three):
+the rest; at least one is required** (the example shows all three). Lead with
+`max_iterations`; size `max_tokens` as a generous backstop (each real-vault
+iteration ≈ 150k–200k tokens — see the budget rule in Phase 1):
 
 ````
 ```loop-budget
 max_iterations: 25
-max_tokens: 200000
+max_tokens: 5000000
 max_minutes: 60
 ```
 ````

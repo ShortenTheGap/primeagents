@@ -65,9 +65,17 @@ max_tokens: {{MAX_TOKENS}}
 max_minutes: {{MAX_MINUTES}}
 ```
 
-- `max_iterations` — stop after this many iterations.
-- `max_tokens` — stop once cumulative tokens spent by the loop reach this.
-- `max_minutes` — stop once wall-clock time across the run reaches this.
+- `max_iterations` — stop after this many iterations. **This is the dial to set
+  first** — it's the only cap that can't overshoot (it advances only when an
+  iteration completes).
+- `max_tokens` — stop once cumulative tokens spent by the loop reach this. In a
+  real agent vault each iteration costs **~150k–200k tokens** (the whole context
+  reloads through cache every turn), so set this as a **generous runaway
+  backstop** — millions, not hundreds of thousands — or it trips after one or two
+  iterations before the goal is reached. Checked at iteration boundaries, so it
+  can overshoot by up to one iteration's worth.
+- `max_minutes` — stop once wall-clock time across the run reaches this. Also
+  checked at iteration boundaries (can overshoot by one iteration).
 
 ### Why a hard stop is required
 

@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "generatedAt": "2026-07-06T13:59:29.646Z",
+  "version": 4,
+  "generatedAt": "2026-07-06T18:25:08.308Z",
   "files": [
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
@@ -79,12 +79,12 @@
     },
     {
       "path": ".claude/skills/loop-maker/SKILL.md",
-      "sha256": "3b3ac691a21fd0de6806b1cb0d8635afd683b0ab39144c79aaca5b12ee85d082",
+      "sha256": "146240e9eed38953e98e47bc7ec615de3c34a2454e07ccd4af7ba487d02da2c4",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/SKILL.md"
     },
     {
       "path": ".claude/skills/loop-maker/templates/HUMAN-GATES.md.tmpl",
-      "sha256": "fc3935a7e9403bfdb8aa3e58bd8db55a092127bdf423dc83bd3f0d09063e7604",
+      "sha256": "8516c6e94f0adb79d668801a924c993b3fe888dc19d64c0a3681594f9821390c",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/HUMAN-GATES.md.tmpl"
     },
     {
