@@ -6,9 +6,6 @@ holds its OWN output to the same bar. Point this at a `loops/<name>/` folder and
 it fails (exit 1) if the scaffold has unfilled placeholders, a missing or empty
 budget/trigger contract, vague verification, or infinite-retry language.
 
-Inspired by qiaomu-goal-meta-skill's goal linter (MIT) — adapted to lint a loop
-folder instead of a single /goal command.
-
 Usage: lint_loop.py <loops/name dir>
 Exit:  0 = clean · 1 = problems found · 2 = misuse
 """

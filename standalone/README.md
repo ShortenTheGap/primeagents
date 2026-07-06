@@ -97,9 +97,6 @@ and there the runtime enforces the budget and pauses at gates for you.
 
 ---
 
-## License & credits
+## License
 
-MIT. Adapted from the open-source [`loop-maker`](https://github.com/EricTechPro/loop-maker)
-skill (MIT, EricTechPro) with the goal-contract rigor and self-linting idea from
-[`qiaomu-goal-meta-skill`](https://github.com/joeseesun/qiaomu-goal-meta-skill)
-(MIT, 向阳乔木). See `loop-maker/LICENSE`.
+MIT licensed. See `loop-maker/LICENSE`.

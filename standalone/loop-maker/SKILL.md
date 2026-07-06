@@ -19,10 +19,6 @@ host). The output is concrete: a `loops/<name>/` folder with the loop's logic, a
 separate verifier program, a state file, human gates, a trigger definition, and a
 budget. Nothing runs until the blueprint is approved.
 
-> Adapted from the open-source `loop-maker` skill (MIT, EricTechPro) for
-> standalone Claude Code use, with the goal-contract rigor and self-linting idea
-> from `qiaomu-goal-meta-skill` (MIT, 向阳乔木). See `LICENSE`.
-
 ---
 
 ## The one rule
