@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "generatedAt": "2026-06-30T21:09:56.235Z",
+  "version": 3,
+  "generatedAt": "2026-07-06T13:59:29.646Z",
   "files": [
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
@@ -79,7 +79,7 @@
     },
     {
       "path": ".claude/skills/loop-maker/SKILL.md",
-      "sha256": "a332fc4032cedfa599fb05e2a85d6c9d7a8d8dc61aa930f553798f53208d9bb9",
+      "sha256": "3b3ac691a21fd0de6806b1cb0d8635afd683b0ab39144c79aaca5b12ee85d082",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/SKILL.md"
     },
     {

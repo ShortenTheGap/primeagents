@@ -2,10 +2,11 @@
 name: loop-maker
 description: >
   Designs and scaffolds a self-running, self-verifying agent loop from a
-  7-question blueprint, for Prime Agent Desk. Trigger on: automate a recurring
-  task, schedule an agent, run unattended, monitor a condition, triage a queue,
-  poll on a cadence, or turn any manual workflow self-running — even if you
-  never say the word "loop". Walks through elicit → survey → select → scaffold,
+  7-question blueprint, for Prime Agent Desk. Primary trigger: "loop", "make a
+  loop", or "set up a loop" — also: automate a recurring task, schedule an
+  agent, run unattended, monitor a condition, triage a queue, poll on a cadence,
+  or turn any manual workflow self-running — even if you never say the word
+  "loop". Walks through elicit → survey → select → scaffold,
   producing a self-contained loop folder with a separate verifier, an external
   state file, human gates, a trigger, and a hard budget.
 ---
@@ -80,6 +81,19 @@ not scaffold until the blueprint is approved.
 ---
 
 ## Phase 1 — Elicit (7 questions, one at a time)
+
+### Gate 0 — loop, or just do it once? (ask this ONE line first)
+
+**Stop before the wizard.** The Loop Runtime now actually *runs* loops, so do
+not launch the full 7-question elicitation on every stray "automate this". Before
+Q1, ask exactly one line and wait:
+
+> **Do you want this to run repeatedly on its own (a loop), or should I just do
+> it once now?**
+
+Only proceed into the 7 questions if the student confirms they want a recurring /
+self-running loop. If they just want the task done once, **do it now and stop** —
+no wizard, no scaffold, no loop folder.
 
 ### Detect-first rule
 
