@@ -1,11 +1,106 @@
 {
-  "version": 1,
-  "generatedAt": "2026-06-23T09:56:18.580Z",
+  "version": 4,
+  "generatedAt": "2026-07-06T18:25:08.308Z",
   "files": [
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
       "sha256": "1866c321a1f20d429ffe7f9cedb919cef8195f439dff907c5b2d79b6ea144fd3",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/hello-prime/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/LICENSE",
+      "sha256": "50b58456be6ea39782a695e45a6a796689077c36cd3988cd0323397ac0b10449",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/LICENSE"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/host-prime-agent-desk.md",
+      "sha256": "52877a40306f3829b4c88e5d60b68e6d53bf1e8b7a2148326487a3ede108981d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/host-prime-agent-desk.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/loops-and-loop-engineering.md",
+      "sha256": "cd548ff3e580f9d9e4ac62c4c86c23474756e5d1054fa983bdf089fad495f622",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/loops-and-loop-engineering.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/pattern-evaluator-optimizer.md",
+      "sha256": "ea3e9e966bb3020a7df30630aec372b0d9c98f6f527982e4de09d4653022b3d2",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/pattern-evaluator-optimizer.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/pattern-orchestrator-workers.md",
+      "sha256": "6b3c6efa1afedc3fce7620f8c9ac4e0591f7e99a54883bbde92e3a49389852e6",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/pattern-orchestrator-workers.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/pattern-ralph.md",
+      "sha256": "a9b0dd293505ec0fb834e920b004bab730fb55cd121fe6a6da00de78bade3449",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/pattern-ralph.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/pattern-react-deterministic-verifier.md",
+      "sha256": "8c24526511be77849889b6a7abc37e1bab0ef1049847e3b69df685c6a3c11bb1",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/pattern-react-deterministic-verifier.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/skill-bank/recommended.md",
+      "sha256": "21bc13b77b587550ab53844756f600d88fa994084a4c1ec0580680bf06551576",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/skill-bank/recommended.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/references/skill-bank/search-agent.md",
+      "sha256": "bf140003db34190a63a0eafec1d28a6242f56a790d1eeafbc23916cf2886a216",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/references/skill-bank/search-agent.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/scripts/lint_loop.py",
+      "sha256": "326721edb9047f7af648a54a04c487f7248326fc903c8b99fc8b6b1ca907ab9d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/scripts/lint_loop.py"
+    },
+    {
+      "path": ".claude/skills/loop-maker/scripts/loop_progress.py",
+      "sha256": "689e565e9b583798895956b26c69dec6777f4579137cb7bf73485b7f021e5dd4",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/scripts/loop_progress.py"
+    },
+    {
+      "path": ".claude/skills/loop-maker/scripts/verifier_template.sh",
+      "sha256": "06615429e71f163e28509ea5f24c8bf63a70c6ccbde76c473db14f9ed2d0b3c7",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/scripts/verifier_template.sh"
+    },
+    {
+      "path": ".claude/skills/loop-maker/scripts/verify_example.sh",
+      "sha256": "23d2d2e907d49dd8a6fe4b970f2366eeece8a4a4c48c1b3f1da86fa56947f3d6",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/scripts/verify_example.sh"
+    },
+    {
+      "path": ".claude/skills/loop-maker/scripts/verify_item_example.sh",
+      "sha256": "925e0b0b1b74635d55f8510dce2cacbc01ef71eb88df3cdf6609336e5a969e01",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/scripts/verify_item_example.sh"
+    },
+    {
+      "path": ".claude/skills/loop-maker/SKILL.md",
+      "sha256": "146240e9eed38953e98e47bc7ec615de3c34a2454e07ccd4af7ba487d02da2c4",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/loop-maker/templates/HUMAN-GATES.md.tmpl",
+      "sha256": "8516c6e94f0adb79d668801a924c993b3fe888dc19d64c0a3681594f9821390c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/HUMAN-GATES.md.tmpl"
+    },
+    {
+      "path": ".claude/skills/loop-maker/templates/loop-SKILL.md.tmpl",
+      "sha256": "2d6b195bc033ac8ee5dfe10344fca47c6484d78519a41923eee6e97615019159",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/loop-SKILL.md.tmpl"
+    },
+    {
+      "path": ".claude/skills/loop-maker/templates/STATE.md.tmpl",
+      "sha256": "3ce8d7c2f747b01c733eb5c3de94ffd57ee5a949923aa625a69a382d9df9be55",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/STATE.md.tmpl"
+    },
+    {
+      "path": ".claude/skills/loop-maker/templates/TRIGGER.md.tmpl",
+      "sha256": "16cfc12c3617e615cfd1da3e3e1ccc2ddeec05c16da9f5ab6c2f56abffda9bab",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/TRIGGER.md.tmpl"
     }
   ]
 }
