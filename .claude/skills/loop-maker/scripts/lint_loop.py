@@ -143,6 +143,28 @@ def lint(loop_dir: Path) -> list[str]:
             if not re.match(r"^(command|env|file)\s*:\s*\S", l):
                 errors.append(f"SKILL.md: loop-requires line must be `command:|env:|file: <value>`, got `{l}`")
 
+    # 11. optional ```loop-allow``` block (opt-in autonomy) — if present, every
+    # line must be `tool:|bash: value`, non-empty, and NOT a dangerously broad
+    # grant (a Write tool that would un-bound writes, or a bare command runner).
+    ab = re.search(r"```loop-allow\s*(.*?)```", skill, re.DOTALL)
+    if ab:
+        lines = [l.strip() for l in ab.group(1).splitlines()]
+        meaningful = [l for l in lines if l and not l.startswith("#") and not l.startswith("<!--")]
+        if not meaningful:
+            errors.append("SKILL.md: empty ```loop-allow``` block — list concrete rules or delete the section")
+        for l in meaningful:
+            m = re.match(r"^(tool|bash)\s*:\s*(\S.*)$", l)
+            if not m:
+                errors.append(f"SKILL.md: loop-allow line must be `tool:|bash: <value>`, got `{l}`")
+                continue
+            kind, value = m.group(1), m.group(2).strip()
+            if kind == "tool" and value in ("Write", "Edit", "MultiEdit", "NotebookEdit", "Bash"):
+                errors.append(f"SKILL.md: loop-allow `tool: {value}` is too broad (writes/Bash are scoped elsewhere) — use a specific send/publish tool or a `bash:` prefix")
+            if kind == "bash":
+                first = value.split()[0] if value.split() else ""
+                if first in ("curl", "wget", "sh", "bash", "zsh", "node", "python", "python3", "eval", "env"):
+                    errors.append(f"SKILL.md: loop-allow `bash: {value}` is too broad (a general command runner) — declare a more specific prefix")
+
     return errors
 
 

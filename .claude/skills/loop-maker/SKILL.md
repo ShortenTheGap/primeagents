@@ -199,13 +199,25 @@ then move to the next.
 > gate it **pauses and waits for approval** — nothing irreversible happens
 > unattended.
 >
-> **Always make these high-risk things pause (never run them unattended):**
-> credentials / accounts / API keys · payments or anything that costs money ·
-> production data or destructive operations · legal / medical / financial
+> **These pause for approval BY DEFAULT (the safe default — don't remove it
+> lightly):** credentials / accounts / API keys · payments or anything that costs
+> money · production data or destructive operations · legal / medical / financial
 > judgements · copyrighted or licensed assets · publishing, deploying, or pushing
 > to a shared branch · anything where ownership or direction is unclear. Low-risk
 > uncertainty is NOT a pause — make a sensible assumption and note it; reserve
 > pauses for the list above so the loop doesn't stall on trivia.
+>
+> **When the loop's whole value IS doing one of these on its own** (auto-send the
+> completion summary, auto-post the drafts through a pre-approved pipeline, notify
+> on anomaly), you don't have to choose between "pauses forever" and "no gate at
+> all." Capture it as an **autonomous action** (below): the loop declares a
+> *concrete, narrow* capability the student **consents to once at Start**, and the
+> runtime then lets exactly that action run unattended (still capped by the
+> budget). Keep it as tight as the value needs — a specific send tool or a
+> specific command, to a bounded audience — never "can run any shell" or "can send
+> to anyone." The student can also grant this ad-hoc from a live gate via **Approve
+> every time**. Default to a gate; reach for an autonomous action only when
+> unattended is the actual point.
 
 ### Two additional captures (both required before scaffold)
 
@@ -395,6 +407,32 @@ file: ~/Documents/tracker.md
 Only declare things the loop genuinely can't run without — a missing requirement
 stops the loop, so don't gate it on nice-to-haves.
 
+**Machine-readable autonomous actions (optional)** — written into the loop's
+`SKILL.md` as a ```` ```loop-allow ```` block, ONLY when the loop must take an
+otherwise-gated action (send/post/publish/push) **unattended** to be worth
+running (Q7). Each line is a *concrete* rule — never a fuzzy class — so the
+student can see exactly what they're consenting to at Start:
+
+````
+```loop-allow
+tool: mcp__claude_ai_Gmail__send_message
+bash: gh pr create
+```
+````
+
+- `tool: <exact tool name>` — auto-allow this one tool (e.g. the specific send
+  tool the loop's action step actually uses; look it up, don't guess).
+- `bash: <command prefix>` — auto-allow a shell command that STARTS WITH this
+  literal prefix (the runtime still blocks `;`/`|`/`$()` so the prefix can't be
+  used to smuggle a second command). Make the prefix as specific as possible.
+
+The runtime honors these ONLY after the student clicks **Allow & start** once
+(consent is bound to the exact rules — change the block and it re-asks). Keep the
+list minimal and narrow: prefer one exact `tool:` over a broad `bash:` prefix,
+and never declare `bash: curl` / a bare interpreter / a Write tool (writes stay
+bounded by Targets regardless). **If the loop needs no unattended action, omit
+this block** — the default gate is the safe choice.
+
 ### Step 4c — Lint the scaffold (a program checks it, not your judgement)
 
 loop-maker holds its own output to the bar it demands of loops. After writing the
@@ -407,8 +445,9 @@ python3 scripts/lint_loop.py loops/<name>/
 
 It fails on unfilled `{{placeholders}}`, a missing/empty budget or trigger block,
 a stub or non-executable verifier, missing gates, a malformed or empty
-`loop-requires` block, and vague or infinite-retry language ("make sure it
-works", "keep trying", "edit anything"). If `python3` is
+`loop-requires`/`loop-allow` block (or a too-broad autonomy grant), and vague or
+infinite-retry language ("make sure it works", "keep trying", "edit anything").
+If `python3` is
 unavailable, walk the Output-discipline checklist below by hand instead.
 
 Then print the file tree so the student can confirm nothing is missing, and remind
@@ -467,6 +506,9 @@ is missing, fix it before declaring done.
 - [ ] Any external dependency the loop needs but the student hasn't set up is
       declared in a `loop-requires` block (or the block is deleted because the
       loop needs nothing beyond the vault) — and the student was told what to set up
+- [ ] If (and only if) the loop must take a send/post/publish action unattended,
+      it's declared as a narrow `loop-allow` rule (specific `tool:`/`bash:` prefix,
+      not a broad grant) — otherwise no block, and the action stays gated
 - [ ] The verifier's argument convention is documented in the loop's `SKILL.md`
 - [ ] The student was told the loop is designed and will not auto-run until the
       desk's Loop Runtime is enabled
