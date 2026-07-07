@@ -245,12 +245,26 @@ to one iteration's worth.
 
 ## Phase 2 — Survey reuse (two passes)
 
-### Pass 2a — Installed capabilities
+### Pass 2a — Installed capabilities (and a dependency probe)
 
 Check what's already available in this agentHome — existing skills in
 `.claude/skills/`, connectors/MCP servers the student has enabled, the `gh`/`git`
 CLIs. For each one relevant to the loop's discovery or action step, note it so
 the scaffold wires it in rather than stubbing it.
+
+**Then probe what the loop needs but you may not have set up.** For each external
+dependency the action/verification steps imply — a CLI (`command -v jq`), an API
+key or token (is the env var set?), an input file the loop reads — check whether
+it's actually present *now*:
+
+- If it **is** present, good — wire it in.
+- If it is **not**, do NOT silently stub it. Record it as a **declared
+  requirement** (kind `command` / `env` / `file`) for the `loop-requires` block
+  (Phase 4), and tell the user plainly: *"this loop needs X, which isn't set up
+  yet — here's how to set it up."* Standalone there's no runtime to enforce this,
+  so **check the requirements before each run** (or have your runner check them);
+  declaring them up front is what turns an opaque mid-run failure into a clear,
+  fixable "you still need X" before the loop starts.
 
 ### Pass 2b — Skill bank search
 
@@ -375,6 +389,29 @@ interval_minutes: 15
 ```
 ````
 
+**Machine-readable requirements (optional)** — written into the loop's `SKILL.md`
+as a ```` ```loop-requires ```` block, from the unmet dependencies found in the
+Phase 2a probe. This is the same portable format Prime Agent Desk's runtime
+preflight enforces (there, a missing requirement stops the loop in a "needs setup"
+state before it runs). Standalone, **you (or your runner) check these before each
+run** — one declaration per line; **delete the block entirely if the loop needs
+nothing beyond your Claude login and project files** (do not leave it empty):
+
+````
+```loop-requires
+command: gh
+env: OPENAI_API_KEY
+file: ~/Documents/tracker.md
+```
+````
+
+- `command: <name>` — a CLI that must be on PATH.
+- `env: <VAR>` — an env var / API key that must be set and non-empty.
+- `file: <path>` — an input file that must exist (relative → project root; `~` = home).
+
+Only declare things the loop genuinely can't run without — don't gate it on
+nice-to-haves.
+
 ### Step 4c — Lint the scaffold (a program checks it, not your judgement)
 
 loop-maker holds its own output to the bar it demands of loops. After writing the
@@ -386,9 +423,10 @@ python3 scripts/lint_loop.py loops/<name>/
 ```
 
 It fails on unfilled `{{placeholders}}`, a missing/empty budget or trigger block,
-a stub or non-executable verifier, missing gates, and vague or infinite-retry
-language ("make sure it works", "keep trying", "edit anything"). If `python3` is
-unavailable, walk the Output-discipline checklist below by hand instead.
+a stub or non-executable verifier, missing gates, a malformed or empty
+`loop-requires` block, and vague or infinite-retry language ("make sure it
+works", "keep trying", "edit anything"). If `python3` is unavailable, walk the
+Output-discipline checklist below by hand instead.
 
 Then print the file tree so the student can confirm nothing is missing, and remind
 them: the loop is **designed and ready**, but it **will not start on its own** —
@@ -445,6 +483,9 @@ is missing, fix it before declaring done.
 - [ ] `TRIGGER.md` has a `loop-trigger` block (`run-until-done` or `interval`)
 - [ ] The loop's declared target paths are recorded in its `SKILL.md`, `work/`
       exists, and any output target the loop writes has been created
+- [ ] Any external dependency the loop needs but the user hasn't set up is
+      declared in a `loop-requires` block (or the block is deleted because the
+      loop needs nothing beyond the project) — and the user was told what to set up
 - [ ] The verifier's argument convention is documented in the loop's `SKILL.md`
 - [ ] The student was told the loop will not auto-run — they run it via a runner
       (`/loop`, `/schedule`/cron, or manually; see `references/host-claude-code.md`),
