@@ -129,6 +129,20 @@ def lint(loop_dir: Path) -> list[str]:
     if not (loop_dir / "work").is_dir():
         errors.append("missing work/ scratch dir (scaffold must create it; add a .gitkeep so it survives sync)")
 
+    # 10. optional ```loop-requires``` block — if present, every line must be a
+    # valid `command:|env:|file: value` declaration, and it must not be empty (an
+    # empty block means the agent neither filled the requirements nor deleted the
+    # section). Absent block = the loop needs nothing beyond the vault = fine.
+    rb = re.search(r"```loop-requires\s*(.*?)```", skill, re.DOTALL)
+    if rb:
+        lines = [l.strip() for l in rb.group(1).splitlines()]
+        meaningful = [l for l in lines if l and not l.startswith("#") and not l.startswith("<!--")]
+        if not meaningful:
+            errors.append("SKILL.md: empty ```loop-requires``` block — list real requirements or delete the section")
+        for l in meaningful:
+            if not re.match(r"^(command|env|file)\s*:\s*\S", l):
+                errors.append(f"SKILL.md: loop-requires line must be `command:|env:|file: <value>`, got `{l}`")
+
     return errors
 
 

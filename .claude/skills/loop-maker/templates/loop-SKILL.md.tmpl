@@ -40,6 +40,28 @@ own `work/` scratch). Anything else is a human gate.
 
 {{TARGET_PATHS}}
 
+## Requirements (what must be set up before this loop can run)
+
+The Loop Runtime checks these **before every run**. If anything is missing it
+stops the loop in a **"needs setup"** state that names exactly what's absent —
+instead of letting the loop start and die mid-run on an error the student can't
+act on. List only what the loop genuinely needs, one per line:
+
+- `command: <name>` — a CLI that must be installed and on PATH (e.g. `gh`, `jq`)
+- `env: <VAR>` — an environment variable / API key that must be set
+- `file: <path>` — an input file that must exist (relative paths resolve to the
+  agent folder; `~` is the home folder)
+
+Fill in the real requirements below, or **delete this whole section** if the loop
+needs nothing beyond the vault and the student's Claude login. Do not leave a
+placeholder — an empty or `{{...}}` line is skipped, and a stray one fails the lint.
+
+```loop-requires
+{{REQUIRES}}
+```
+
+---
+
 ## Verifier
 
 Each iteration calls the verifier after acting, and only advances on exit 0:
