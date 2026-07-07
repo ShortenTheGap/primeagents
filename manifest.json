@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "generatedAt": "2026-07-06T18:25:08.308Z",
+  "version": 5,
+  "generatedAt": "2026-07-07T17:13:08.747Z",
   "files": [
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
@@ -54,7 +54,7 @@
     },
     {
       "path": ".claude/skills/loop-maker/scripts/lint_loop.py",
-      "sha256": "326721edb9047f7af648a54a04c487f7248326fc903c8b99fc8b6b1ca907ab9d",
+      "sha256": "10887d93b2dbb3b10b7927b58bd2d52b318b72620d4682ec7e1d6070d43a9a72",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/scripts/lint_loop.py"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "path": ".claude/skills/loop-maker/SKILL.md",
-      "sha256": "146240e9eed38953e98e47bc7ec615de3c34a2454e07ccd4af7ba487d02da2c4",
+      "sha256": "3b5affef15685fbcdc68fac64aa91c2353b22214194dc2026746f60eb76fe8e6",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/SKILL.md"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "path": ".claude/skills/loop-maker/templates/loop-SKILL.md.tmpl",
-      "sha256": "2d6b195bc033ac8ee5dfe10344fca47c6484d78519a41923eee6e97615019159",
+      "sha256": "42c6c7a71c84f4b724e330ffcb5af8c7bcbae539d36dab6fb34e94eed7936743",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/loop-SKILL.md.tmpl"
     },
     {
