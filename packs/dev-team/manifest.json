@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T07:39:46.077Z",
+  "generatedAt": "2026-08-10T08:32:11.288Z",
   "files": [
     {
       "path": ".claude/agents/code-reviewer.md",
@@ -266,6 +266,11 @@
       "path": "CLAUDE.md",
       "sha256": "edbb2a8da5f93b28e94fe3db264691a6d7a9281a8b954422a7f52d50e45e361e",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/CLAUDE.md"
+    },
+    {
+      "path": "WELCOME.md",
+      "sha256": "6d13565d1e6366dba065c4ba3fa8d1a6a8010ab0927d69569533e054e210304e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/WELCOME.md"
     }
   ]
 }
