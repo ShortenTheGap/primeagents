@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "generatedAt": "2026-08-10T08:32:11.288Z",
+  "version": 2,
+  "generatedAt": "2026-08-11T15:45:21.209Z",
   "files": [
     {
       "path": ".claude/agents/code-reviewer.md",
@@ -113,6 +113,66 @@
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/dispatching-parallel-agents/SKILL.md"
     },
     {
+      "path": ".claude/skills/epic-design/references/accessibility.md",
+      "sha256": "5d024531fcc099ac945680b192f90bfe489a687bf1da10e480da2482d308929f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/accessibility.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/asset-pipeline.md",
+      "sha256": "f21549ed232bb3fa732392849fae114ff19ca8dc2cff684e5cf2c6090cc63a0f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/asset-pipeline.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/depth-system.md",
+      "sha256": "18875269bde6ab84f012b18ca67a49a1fc5c0111022c82168eee0fac2c708272",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/depth-system.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/directional-reveals.md",
+      "sha256": "b7a229de5016831464f59ba2a605f54ba1e91841a94d55e6b9d475e5744ce20c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/directional-reveals.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/examples.md",
+      "sha256": "0c50ddd1d3d222bbceda2bb8ade3b762445e17f29c604a2e3e77502abfbf360e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/examples.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/inter-section-effects.md",
+      "sha256": "a2cd27a39aab72a1cd9d5766f5b10595d30b3c9adfb1ec3d4dc9e389545a7dbe",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/inter-section-effects.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/motion-system.md",
+      "sha256": "e077d8af5bfd137e5a5fad11cf4006086a1dae789508ff0703a286a95d4bb560",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/motion-system.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/performance.md",
+      "sha256": "616e5b7c3db992dc7eec1398ae0eaa15202d994cf9f15e954f19c2cbba9b5a50",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/performance.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/references/text-animations.md",
+      "sha256": "39e5c548aaa1fcf72b903d26686800e7ff7a9d82f412120d980dba66656a0513",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/references/text-animations.md"
+    },
+    {
+      "path": ".claude/skills/epic-design/scripts/inspect-assets.py",
+      "sha256": "3a70a0d7ac5f39d8f6e8ab049e8f7a2ac05441cb3e710733d7a2cf7e7a2f0aa5",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/scripts/inspect-assets.py"
+    },
+    {
+      "path": ".claude/skills/epic-design/scripts/validate-layers.js",
+      "sha256": "4e3b5ef3197a72ae30465226bfa954513369f6e35f5c3ad114527136b4b9ec0c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/scripts/validate-layers.js"
+    },
+    {
+      "path": ".claude/skills/epic-design/SKILL.md",
+      "sha256": "3611bc29598c2320478f1cf0b307860700573dcff27f3817cbad78c4112bef11",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/epic-design/SKILL.md"
+    },
+    {
       "path": ".claude/skills/executing-plans/SKILL.md",
       "sha256": "a711f83fb762e2ea0fa151f598893da9911a408895c91cc7a7e0770dd59a27b3",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/executing-plans/SKILL.md"
@@ -223,6 +283,301 @@
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/test-driven-development/testing-anti-patterns.md"
     },
     {
+      "path": ".claude/skills/ui-ux-pro-max/data/_sync_all.py",
+      "sha256": "8159557ca10a90dc56b25f04e71772b97e981dbe6400ac3c7dd8cd2816af6280",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/_sync_all.py"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/app-interface.csv",
+      "sha256": "a276e55817958075a8dffeb5f5d7be16703b1611e9f0a3527525e1a44df25c46",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/app-interface.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/charts.csv",
+      "sha256": "ebb565308115f955791b0431797a89d9b3587c25d5babb9428d10712c4924817",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/charts.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/colors.csv",
+      "sha256": "69ee8c1147b269599d20ca418bdd6f32563a9aa2d962fb9a9b8dec66bf7b1ba4",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/colors.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/design.csv",
+      "sha256": "9043c3f06faa9b43a8b992bb49f4c03f218e0420b94155f5ae0e31f4c994ba5f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/design.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/draft.csv",
+      "sha256": "c43084533e34e93ad95ba858450f653d910ac1905f1e4c215fa581183f5ffdb4",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/draft.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/google-fonts.csv",
+      "sha256": "2c03a3cd134d126bd9d6a7dc2a6360dc5272219ad6df3eb9315b031f806e1487",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/google-fonts.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/icons.csv",
+      "sha256": "9da693f818d43e2110e28d949905c85baad1650d383ae9e1568f58c766b0e016",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/icons.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/landing.csv",
+      "sha256": "080cedbcd61ff8ec9520f33929baa76bee9589e783f83b2f8d824a466b6a46d7",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/landing.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/products.csv",
+      "sha256": "6ea44a7725d708a25f80626369eb011ec202809b5dfcc8ca7fce2402b5489cf1",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/products.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/react-performance.csv",
+      "sha256": "47c0a454cb73bf32378c55eb781dea4c44440ec6a1b52039119afc354315c17e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/react-performance.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "sha256": "0c37794e6b6e3d0e3a0bb90eb619608faaa5ce703afe34c27ef6e3c1ac583258",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/angular.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "sha256": "ff7fa30b41464fbe907a99499a32b4395210ef57f3674bef628aeadf767f40a8",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/astro.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "sha256": "e470e6bc2bcd8562667cc764d1e1afb0be0a30ca4dc9ec12fa18b19d46f156bd",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/flutter.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "sha256": "1f004891dd189f6bc2a7717401e3100244326e7e2f3963a79bf7b2349d85e091",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "sha256": "8e1995b93414e9d50f8d450bdd15853ff138ca3b8c9d6529cd3171729fa5fa7f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "sha256": "0f523354dec42df92fc570a408cd1128fd1efc879874ad9163ced4f2b179d2b1",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/laravel.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "sha256": "06a8e8c13bd44696c6ebb4cb6c4d8dea440e3de8cce77616512529ed29258f0c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "sha256": "c1f3c9e438ab89f806a0c2e0be4c37cb34d9370c16207353aa9c972d548f710e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "sha256": "696ec6df0e5971cd8b69080ee6abea2e9748fb2de47acb2bcc748302684f2030",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "sha256": "a08ca77fcf6b6d9531982dce465366296013bfcf12d2938ac72ad57cf0c4f085",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/react-native.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "sha256": "b6e3eb0e4c9c01bd00ffb951d5ca224a19d488b4544c75436f48cf92ff12bf45",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/react.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "sha256": "0f9cc6fbfebea8026950c422808bb3aae239185bad770726b331f827f8e1a6de",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "sha256": "bc8d158994a8bdf412830a9dd5e5a5534edd2f367a6e50e0ebd4d76f592dfa3f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/svelte.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "sha256": "e87cb9eee208bb753bdab96d4a261c7f830c4317ee90ec098316b248fc32be85",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "sha256": "c182b38b30fa11531796e018d9fa87d63a5a85bee35c1bfb9baf480df098d270",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/threejs.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "sha256": "9b793c3f4eec85f77a758c09322f2b62f3b3ca549bb713ccf0849ef885934395",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/stacks/vue.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/styles.csv",
+      "sha256": "9b5089dcde8999333b36878252a255cc3bacbb2fe7b836c76cc7f7aa2abb643d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/styles.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/typography.csv",
+      "sha256": "a393558b7acc79193744954b93e8e878b2d7b0a4901e3433995b66a219935d3a",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/typography.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "sha256": "41976082ecae1100da937c949215dc6694393e03f3c2a7444dd92a9edb43cb11",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/ui-reasoning.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "sha256": "1870ee048f2a2bdd60709f8f7adf7f3b6dcad560bc005c8b2915a8ac8639820d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/data/ux-guidelines.csv"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/__pycache__/core.cpython-312.pyc",
+      "sha256": "8196f88e6459b2b7a31f2524e240d424bb9dfea874b39ceea99d839ac1bebc42",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/__pycache__/core.cpython-39.pyc",
+      "sha256": "7a71b53c4debf28a6b0bf00d8229bf0d10bc4fd7373bb2e46387ed33c167254b",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/__pycache__/core.cpython-39.pyc"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/__pycache__/design_system.cpython-312.pyc",
+      "sha256": "48ad99ccc5c7d5699bc14a517ed9f92c2d288f85eacf66348f2d00387c7dcb1f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/__pycache__/design_system.cpython-312.pyc"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/__pycache__/design_system.cpython-39.pyc",
+      "sha256": "1f3a5908e45ce09d732aa086b1a62313110bfc3d7f6b9f571bcb43a5a21463e8",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/__pycache__/design_system.cpython-39.pyc"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/core.py",
+      "sha256": "378139ed6401c5dcfe8b414b2cc0887660c5b07904ca2e46a079036e0bee7ed9",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/core.py"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/design_system.py",
+      "sha256": "ee9dfd9e5d19161ff1aaa1b84c54f265ebfddbb055f7830d367e12ded974ed54",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/design_system.py"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/search.py",
+      "sha256": "6a565f960a672e16dd064ccadd3406db999bfd1a4bff4d609b36a8d4c6450b86",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/scripts/search.py"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "sha256": "4d89e171a3edc39386ce5df27d4ff1446fc20c2dd41702154c93b5535d4cac31",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/base/quick-reference.md",
+      "sha256": "108f2a0b90f1c0dc195f4bef34efc554563649a1f41402eaa39b9e1ea55b8e97",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/base/quick-reference.md"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/base/skill-content.md",
+      "sha256": "eef7b944a52651804e452b7dc071e92db8a599dcd3e6fa2833701509b293cf20",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/base/skill-content.md"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/agent.json",
+      "sha256": "8093dd46594bd774e8af79d3112db81b01d10c27f3214d1fe78e4564437e91a6",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/agent.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/augment.json",
+      "sha256": "37204823ab33814cfd835751d7ec251bb8daaf86ce916f0e13f6bb8c6c9d0459",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/augment.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/claude.json",
+      "sha256": "0501eef7d64195112318286291a912cde64ad2101c6c6813ea260933a739c888",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/claude.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/codebuddy.json",
+      "sha256": "a4af41d9430a557abb34b4fc84f469383b14f67a628c95039cb3bd6e4dcaf252",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/codebuddy.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/codex.json",
+      "sha256": "1562e19952e171a0c8b441aebf782419188fdb509c0c546d343088a8571263e3",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/codex.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/continue.json",
+      "sha256": "d06ebdf1bf64c32b17baa340eacb0c4fa9409544e64fb60413f920208cd76a70",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/continue.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/copilot.json",
+      "sha256": "366971362c700ea01696664930bfdad089e456a5a716509d1dcea3e481c0597e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/copilot.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/cursor.json",
+      "sha256": "632706202ea60fe02084dacddf559356b06505ee68f2738cbb8ebac7242df5f3",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/cursor.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/droid.json",
+      "sha256": "10cba179efa857a287c394a8fbb288e21db846ba82289f5ebb124b86a968ab56",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/droid.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/gemini.json",
+      "sha256": "9bbf8d7f4afe472e24e9ccff2dd854f75f237ce686e5646f980410690f3204fe",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/gemini.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/kilocode.json",
+      "sha256": "96a735fb50dd4bd67d0922cf87b69165e31b9ec8354281abb9de75a37b9a8e0f",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/kilocode.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/kiro.json",
+      "sha256": "d6c9f750076897afb7368241c6021f39f6a28137e35fadf6eae7e4c4aac72759",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/kiro.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/opencode.json",
+      "sha256": "783469feb70d75e2eb785ce9848118e81267bde641f7449a970d90c9b0b2b3bf",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/opencode.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/qoder.json",
+      "sha256": "b1da8ebcdadd68ad6569b970696341452f5b86999f3db4f89465032947992da3",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/qoder.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/roocode.json",
+      "sha256": "8927215a17fef43df2e99a325c42996fb0f1a01c591aed77e6097ca37d6287b4",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/roocode.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/trae.json",
+      "sha256": "591c95c81b24633c9d7f2da6c58716d5b025ffc40f724138527ddd94110fd800",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/trae.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/warp.json",
+      "sha256": "8428bebd79f799367951045998614b17762508584008e59c2a0edf60f9d613bf",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/warp.json"
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/templates/platforms/windsurf.json",
+      "sha256": "9445eb6334b6c93dd5498f4555c4972a15f87cdef060f514dc2d23f9aa4346ea",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/ui-ux-pro-max/templates/platforms/windsurf.json"
+    },
+    {
       "path": ".claude/skills/using-git-worktrees/SKILL.md",
       "sha256": "de9dcde34840eee074047ec327d4ea6ca4954c5a73a6d874dc48f25fe46c9e7c",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/using-git-worktrees/SKILL.md"
@@ -253,6 +608,11 @@
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/verification-before-completion/SKILL.md"
     },
     {
+      "path": ".claude/skills/vulnerability-scanner/SKILL.md",
+      "sha256": "533416fdc99b24e815d7b78dfc8a4177a3232871ae14ae1accff47625d03aa8d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/vulnerability-scanner/SKILL.md"
+    },
+    {
       "path": ".claude/skills/writing-plans/plan-document-reviewer-prompt.md",
       "sha256": "6fce2aa83c63715697e9dd86050c820716100b91efbd9f12bab8477ecc060256",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-plans/plan-document-reviewer-prompt.md"
@@ -261,6 +621,41 @@
       "path": ".claude/skills/writing-plans/SKILL.md",
       "sha256": "90056bad3d5f196fa7c9fec0ffe592e6d9c86bc983e406642a51d1a4198b7024",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-plans/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/writing-skills/anthropic-best-practices.md",
+      "sha256": "217629b356c09c9bd11017c9788e8fc654ca1b32c92d4a51cd490e16dd65e59a",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/anthropic-best-practices.md"
+    },
+    {
+      "path": ".claude/skills/writing-skills/examples/CLAUDE_MD_TESTING.md",
+      "sha256": "0b379a3415e185d3c434b3ad283d8aa132f3022c2a4f210f168865b5986bcef0",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/examples/CLAUDE_MD_TESTING.md"
+    },
+    {
+      "path": ".claude/skills/writing-skills/graphviz-conventions.dot",
+      "sha256": "b18a02773875f6c7b92f2a260e88550c92a62549b0009df9d680f7e9541d0ecc",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/graphviz-conventions.dot"
+    },
+    {
+      "path": ".claude/skills/writing-skills/persuasion-principles.md",
+      "sha256": "a51bc9bf75189ea73a27b3fb504a2fdfdb966fb1f7f1cdf03203230a216ccc03",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/persuasion-principles.md"
+    },
+    {
+      "path": ".claude/skills/writing-skills/render-graphs.js",
+      "sha256": "ccda971a87bb185f8febf81c56b556a20d026fa980c17b35fa3e8824fbb37852",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/render-graphs.js"
+    },
+    {
+      "path": ".claude/skills/writing-skills/SKILL.md",
+      "sha256": "f01f666a4426ce800d40649704104c252e6607c196656e5ce6a28e9f51650f3a",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/writing-skills/testing-skills-with-subagents.md",
+      "sha256": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-skills/testing-skills-with-subagents.md"
     },
     {
       "path": "CLAUDE.md",
