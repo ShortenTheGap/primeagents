@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# SessionStart hook for the dev-team pack (ported from the superpowers plugin).
+# Injects the "using-superpowers" skill as session context so the model knows
+# how to discover and use the skills that ship in this pack.
+#
+# Ported change: this pack ships as loose folder-local files (no plugin root),
+# so skills live at ${CLAUDE_PROJECT_DIR}/.claude/skills instead of
+# ${CLAUDE_PLUGIN_ROOT}/skills. We resolve the skills root from
+# CLAUDE_PROJECT_DIR (falling back to the script's own location).
+
+set -euo pipefail
+
+# Determine the pack root (the folder containing .claude/).
+# Prefer CLAUDE_PROJECT_DIR (set by the runtime); fall back to walking up from
+# this script: .claude/hooks/session-start -> pack root.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="${CLAUDE_PROJECT_DIR:-"$(cd "${SCRIPT_DIR}/../.." && pwd)"}"
+SKILLS_DIR="${PROJECT_DIR}/.claude/skills"
+
+# Read using-superpowers content.
+using_superpowers_content=$(cat "${SKILLS_DIR}/using-superpowers/SKILL.md" 2>&1 || echo "Error reading using-superpowers skill")
+
+# Escape string for JSON embedding using bash parameter substitution.
+# Each ${s//old/new} is a single C-level pass - orders of magnitude
+# faster than the character-by-character loop this replaces.
+escape_for_json() {
+    local s="$1"
+    s="${s//\\/\\\\}"
+    s="${s//\"/\\\"}"
+    s="${s//$'\n'/\\n}"
+    s="${s//$'\r'/\\r}"
+    s="${s//$'\t'/\\t}"
+    printf '%s' "$s"
+}
+
+using_superpowers_escaped=$(escape_for_json "$using_superpowers_content")
+session_context="<EXTREMELY_IMPORTANT>\nYou have superpowers.\n\n**Below is the full content of your 'using-superpowers' skill - your introduction to using skills. For all other skills, use the 'Skill' tool:**\n\n${using_superpowers_escaped}\n</EXTREMELY_IMPORTANT>"
+
+# Output context injection as JSON.
+# This pack runs under Claude Code / the Claude Agent SDK, which reads the
+# nested hookSpecificOutput.additionalContext form. We emit that by default and
+# keep the Cursor (additional_context) branch for portability.
+#
+# Uses printf instead of heredoc to work around bash 5.3+ heredoc hang.
+# See: https://github.com/obra/superpowers/issues/571
+if [ -n "${CURSOR_PLUGIN_ROOT:-}" ]; then
+  # Cursor sets CURSOR_PLUGIN_ROOT
+  printf '{\n  "additional_context": "%s"\n}\n' "$session_context"
+elif [ -n "${COPILOT_CLI:-}" ]; then
+  # Copilot CLI (sets COPILOT_CLI=1) — SDK standard top-level format
+  printf '{\n  "additionalContext": "%s"\n}\n' "$session_context"
+else
+  # Claude Code / Claude Agent SDK — nested hookSpecificOutput format
+  printf '{\n  "hookSpecificOutput": {\n    "hookEventName": "SessionStart",\n    "additionalContext": "%s"\n  }\n}\n' "$session_context"
+fi
+
+exit 0

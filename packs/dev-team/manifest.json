@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-10T08:32:11.288Z",
+  "files": [
+    {
+      "path": ".claude/agents/code-reviewer.md",
+      "sha256": "b17be291994b798cf34b74c5d0afcb9da92dd466453557933161cc4e7332029d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/code-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/frontend-designer.md",
+      "sha256": "a61e23cb2c053bb436d6bbd02290b8077c112e4e11d52420c36e0e6f72cf6e48",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/frontend-designer.md"
+    },
+    {
+      "path": ".claude/agents/project-assistant.md",
+      "sha256": "748cf5b8785c1bd4ab5268661028bd2de756a8727103bcee9ce69264f76bc7f8",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/project-assistant.md"
+    },
+    {
+      "path": ".claude/agents/qa-orchestrator.md",
+      "sha256": "0a9ca208559114b388701759d86443cc6ba813de25bf2b4c98d1a7fa03764e0d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/qa-orchestrator.md"
+    },
+    {
+      "path": ".claude/agents/smoke-tester.md",
+      "sha256": "e67956af120b22816d5d3b58e0875a7caa0f9037d5b2411dcf5c8a584b2571ed",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/smoke-tester.md"
+    },
+    {
+      "path": ".claude/agents/tech-cofounder.md",
+      "sha256": "b2ad63c3f9a2dc4981509f235b400dd6802f93f65f670f38786357833d0d15f6",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/tech-cofounder.md"
+    },
+    {
+      "path": ".claude/agents/vibe-coder.md",
+      "sha256": "e82b0fca696d6b1ef09134f7ca96ad76165b2caa849506de8daaadd99209faa1",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/vibe-coder.md"
+    },
+    {
+      "path": ".claude/commands/brainstorm.md",
+      "sha256": "9c8219cf19f34a002766132800666f196afc2ff09befa1afa5726426ee3ee6c8",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/commands/brainstorm.md"
+    },
+    {
+      "path": ".claude/commands/execute-plan.md",
+      "sha256": "622568a30dc85e7f57a32d581bfad17ca138c141d8fd6a184b7d9e848abd4035",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/commands/execute-plan.md"
+    },
+    {
+      "path": ".claude/commands/write-plan.md",
+      "sha256": "1a932a02e5115234fa83a4a248ea744d64ed4688fa0f74613f7400d97dcd82cc",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/commands/write-plan.md"
+    },
+    {
+      "path": ".claude/hooks/session-start",
+      "sha256": "4b74ca11dacaf9e2873fddafe5737b59f94540d4f835be0fa55bda4471074272",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/hooks/session-start"
+    },
+    {
+      "path": ".claude/settings.json",
+      "sha256": "8cdf7ec3f2e1aaba08b7259ef7ec6713a7f2fc35a3b1b3e3f125be24833c5bf5",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/settings.json"
+    },
+    {
+      "path": ".claude/skills/brainstorming/scripts/frame-template.html",
+      "sha256": "7c3a788b6fe3f66c4e87db0e756f0f60bce14d58585e3fc6a8d835cde701bfad",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/scripts/frame-template.html"
+    },
+    {
+      "path": ".claude/skills/brainstorming/scripts/helper.js",
+      "sha256": "e763d82f32b4ebb320be2f0d08449d3e5a0585778edf5c407c1fdab3f39976a5",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/scripts/helper.js"
+    },
+    {
+      "path": ".claude/skills/brainstorming/scripts/server.cjs",
+      "sha256": "4b951e038fdf624b4b2b4afa9ea4eec0c49a0fea253ed9c5e305b57eb3be495d",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/scripts/server.cjs"
+    },
+    {
+      "path": ".claude/skills/brainstorming/scripts/start-server.sh",
+      "sha256": "3442a54b5ee5511637d27bf696e092b72f94c2324f40b5ba4410da4dd0c23bc8",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/scripts/start-server.sh"
+    },
+    {
+      "path": ".claude/skills/brainstorming/scripts/stop-server.sh",
+      "sha256": "f65b7634a27343eab2086bdb6c59ba78695685f471b5a577b08a8817f7c50600",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/scripts/stop-server.sh"
+    },
+    {
+      "path": ".claude/skills/brainstorming/SKILL.md",
+      "sha256": "bba47904a7f6bbee3bf8a107ebbe84e65d392be683bbb898ded736b29e415f90",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/brainstorming/spec-document-reviewer-prompt.md",
+      "sha256": "12cb5ed58aef41b8da6fbb505547c71ca3f5658c83b66ca6e556c936308b3189",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/spec-document-reviewer-prompt.md"
+    },
+    {
+      "path": ".claude/skills/brainstorming/visual-companion.md",
+      "sha256": "a2bc6fc47d0df1df981d02f707a16225b147f462e7059175ad2bc5e6dd29fcae",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/brainstorming/visual-companion.md"
+    },
+    {
+      "path": ".claude/skills/designer/SKILL.md",
+      "sha256": "d39adf3a983de7dafc75991590d54f091755f7e4163d5a5ed085ecd719157184",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/designer/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/dispatching-parallel-agents/SKILL.md",
+      "sha256": "76806091c7f923ba2596546b19cccd98a08e57a68745df77c3a7b998fe838e2b",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/dispatching-parallel-agents/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/executing-plans/SKILL.md",
+      "sha256": "a711f83fb762e2ea0fa151f598893da9911a408895c91cc7a7e0770dd59a27b3",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/executing-plans/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/finishing-a-development-branch/SKILL.md",
+      "sha256": "dd2f82c6dc8582b621f9eb57fcb65f557f88eadf872727ac81d0840ae12c504e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/finishing-a-development-branch/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/receiving-code-review/SKILL.md",
+      "sha256": "c9382e92b8f32363566068ecfed19d3b2651eaf40d3942b24840f839dedfc406",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/receiving-code-review/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/requesting-code-review/code-reviewer.md",
+      "sha256": "7f5328dca12cb200005ae9d4386f63a9b0acb735ece57f82db206b4a3189ccae",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/requesting-code-review/code-reviewer.md"
+    },
+    {
+      "path": ".claude/skills/requesting-code-review/SKILL.md",
+      "sha256": "a5ff68586ccf62d1803cedeb71d60fd96ec05591d29c8d123196117eefd34cd0",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/requesting-code-review/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/subagent-driven-development/code-quality-reviewer-prompt.md",
+      "sha256": "06d1e7c2287e5a00bd1809bf39038abd5f413b4cf917c37d30f00c48f6293421",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/subagent-driven-development/code-quality-reviewer-prompt.md"
+    },
+    {
+      "path": ".claude/skills/subagent-driven-development/implementer-prompt.md",
+      "sha256": "a416193f881e5a712c988fffabfe1d5a97bffcd091eb95577c84fe2136588617",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/subagent-driven-development/implementer-prompt.md"
+    },
+    {
+      "path": ".claude/skills/subagent-driven-development/SKILL.md",
+      "sha256": "081ad3869e55c80bf8f890b4768a90c0e8057daf94b1b6fadebfc85ea5b8304a",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/subagent-driven-development/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/subagent-driven-development/spec-reviewer-prompt.md",
+      "sha256": "631980e472eec5394de8b89b69d432e54fd3f7f523ecf9afa7eb4cda0c9b2baf",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/subagent-driven-development/spec-reviewer-prompt.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/condition-based-waiting-example.ts",
+      "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/condition-based-waiting-example.ts"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/condition-based-waiting.md",
+      "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/condition-based-waiting.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/CREATION-LOG.md",
+      "sha256": "b482ef9a918fbfc6c369729e8160633ddfa2332466dd362ee73f1527c239ef8b",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/CREATION-LOG.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/defense-in-depth.md",
+      "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/defense-in-depth.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/find-polluter.sh",
+      "sha256": "6462747eae9b175ac145b78bcfaeab755654a75e32637f08eb633f065a9e1d7c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/find-polluter.sh"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/root-cause-tracing.md",
+      "sha256": "a81bee9448794d261b4aca8487c595d11ff4bd4e10a5f96bca1117dd32527050",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/root-cause-tracing.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/SKILL.md",
+      "sha256": "4999cb851360485eca5074e727bbdd62ef20549c5d5b01216fcbf5831badb473",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/test-academic.md",
+      "sha256": "fe2ba480d78ac0d686dc025f41c2a32a43d642bf533f91b0c6053a04d35d6486",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/test-academic.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/test-pressure-1.md",
+      "sha256": "0b6a915db0054577819834c79be9eb614e97bddba10d73768e1fbe91cfed048a",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/test-pressure-1.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/test-pressure-2.md",
+      "sha256": "b2030aeffba07050e8ad573ddf87486457c4a016a786bb326235bebd856f2016",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/test-pressure-2.md"
+    },
+    {
+      "path": ".claude/skills/systematic-debugging/test-pressure-3.md",
+      "sha256": "96b50a52e2c7989c9cf20fb752c47c1e9a3a70dc362f8f7989f8f5b64dac7708",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/systematic-debugging/test-pressure-3.md"
+    },
+    {
+      "path": ".claude/skills/test-driven-development/SKILL.md",
+      "sha256": "7dee67b4af6bdccc7a914ca34533184d64592d0f5b23aeae631538168db14994",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/test-driven-development/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/test-driven-development/testing-anti-patterns.md",
+      "sha256": "bde453bc258f06543987477c837939afaa774ea2acbd9f308d702fc452bc4283",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/test-driven-development/testing-anti-patterns.md"
+    },
+    {
+      "path": ".claude/skills/using-git-worktrees/SKILL.md",
+      "sha256": "de9dcde34840eee074047ec327d4ea6ca4954c5a73a6d874dc48f25fe46c9e7c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/using-git-worktrees/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/using-superpowers/references/codex-tools.md",
+      "sha256": "9014e6746c9a6d3af9eeb9608f1ad637ee334e5a12d178747e3042937fc3da2b",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/using-superpowers/references/codex-tools.md"
+    },
+    {
+      "path": ".claude/skills/using-superpowers/references/copilot-tools.md",
+      "sha256": "5e0e9248e8bd965a28c8721bed24ddfa44a1ee66a89ee275da4a8260fe636e02",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/using-superpowers/references/copilot-tools.md"
+    },
+    {
+      "path": ".claude/skills/using-superpowers/references/gemini-tools.md",
+      "sha256": "477239fd7b4868f016662831e0fe840557ce91217f057f742a41af57a53554de",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/using-superpowers/references/gemini-tools.md"
+    },
+    {
+      "path": ".claude/skills/using-superpowers/SKILL.md",
+      "sha256": "316e29381219adf0cac62190c67aeabf427d6e6e5f2735541d502b3d339be7aa",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/using-superpowers/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/verification-before-completion/SKILL.md",
+      "sha256": "ea52d15aabaf72bc6b558efe2c126f161b53961090ddcd712000273bfe8c7b6c",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/verification-before-completion/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/writing-plans/plan-document-reviewer-prompt.md",
+      "sha256": "6fce2aa83c63715697e9dd86050c820716100b91efbd9f12bab8477ecc060256",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-plans/plan-document-reviewer-prompt.md"
+    },
+    {
+      "path": ".claude/skills/writing-plans/SKILL.md",
+      "sha256": "90056bad3d5f196fa7c9fec0ffe592e6d9c86bc983e406642a51d1a4198b7024",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/skills/writing-plans/SKILL.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "edbb2a8da5f93b28e94fe3db264691a6d7a9281a8b954422a7f52d50e45e361e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/CLAUDE.md"
+    },
+    {
+      "path": "WELCOME.md",
+      "sha256": "6d13565d1e6366dba065c4ba3fa8d1a6a8010ab0927d69569533e054e210304e",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/WELCOME.md"
+    }
+  ]
+}
