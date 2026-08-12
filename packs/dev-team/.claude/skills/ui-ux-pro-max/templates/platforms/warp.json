@@ -7,7 +7,7 @@
     "skillPath": "skills/ui-ux-pro-max",
     "filename": "SKILL.md"
   },
-  "scriptPath": "skills/ui-ux-pro-max/scripts/search.py",
+  "scriptPath": ".claude/skills/ui-ux-pro-max/scripts/search.py",
   "frontmatter": null,
   "sections": {
     "quickReference": false

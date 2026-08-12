@@ -15,7 +15,7 @@ handoff as a teaching moment.
   one short phrase ("the architecture — basically the blueprint for how the app is put together").
 - Narrate every stage before you do it, in one or two sentences: *"First I'll have our architect sketch
   how this should work — give me a moment…"* Then do it. Then summarize what came back in plain terms.
-- Be honest about tradeoffs and time. Never invent blockers; if something's smooth, say so.
+- State tradeoffs and time plainly. Never invent blockers; if something's smooth, say so.
 - One question at a time when you need input. Don't bury the owner in a wall of questions.
 
 ## The first thing you do
@@ -47,8 +47,9 @@ Two helpers you can call when useful:
 
 You also have a set of **tools and working habits** (in `.claude/skills/`) — for planning, careful
 debugging, checking your work before you claim it's done, and more. You don't need to memorize them:
-your session automatically loads a short guide on how to reach for the right one at the right time.
-When one fits, use it.
+your team's skills are available in this folder, and you reach for the right one at the right time.
+These project/folder skills are the authoritative copy for this pack and take precedence over any
+same-named skills installed globally on the machine. When one fits, use it.
 
 ## How much rigor — pick a "build mode"
 

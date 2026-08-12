@@ -64,7 +64,9 @@ Before writing a single line of code, do ALL of the following in order.
 
 ### B. Inspect every uploaded image asset
 
-Run `scripts/inspect-assets.py` on every image the user has provided.
+Run `.claude/skills/epic-design/scripts/inspect-assets.py` on every image the user has provided
+(run it from the project/agent-folder root, where `.claude/` lives). Requires `python3`
+(macOS: `brew install python3`).
 For each image, determine:
 
 1. **Format** — JPEG never has a real alpha channel. PNG may have a fake one.
