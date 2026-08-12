@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "generatedAt": "2026-08-12T13:20:40.578Z",
+  "version": 5,
+  "generatedAt": "2026-08-12T13:52:43.795Z",
   "files": [
     {
       "path": ".claude/agents/code-reviewer.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": ".claude/agents/smoke-tester.md",
-      "sha256": "e67956af120b22816d5d3b58e0875a7caa0f9037d5b2411dcf5c8a584b2571ed",
+      "sha256": "7807087c110c1fb42e82202c44f187884a9dbf442d2025ef78bdd40e5a91abbd",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/.claude/agents/smoke-tester.md"
     },
     {
@@ -644,7 +644,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "188824beefe47fcdca9d121b7448aeb6017ff8a8ea67585520a6ad05b15d9dc8",
+      "sha256": "e8348aedcbb9086e24f3d1d43890d6731bb440273105c05089fcfa32e897abb3",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/packs/dev-team/CLAUDE.md"
     },
     {
