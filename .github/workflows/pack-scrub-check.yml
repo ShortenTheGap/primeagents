@@ -1,0 +1,37 @@
+name: pack-scrub-check
+
+# Publish gate for the dev-team (Manny) pack. Students pull the pack straight
+# from raw.githubusercontent of `main`, so a leaked personal path / secret in a
+# committed file ships the instant it lands on main. This runs the pack's own
+# scrub-check on every push and PR that touches the pack so such a commit turns
+# RED (and, if scrub-check is a required check in branch protection, is blocked).
+#
+# scrub-check.test.mjs walks packs/dev-team/ and fails on forbidden patterns
+# (personal C:\Users / /Users/PC paths, internal hosts, mempalace, a known UUID).
+# It has no dependencies — Node's built-in test runner only.
+
+on:
+  push:
+    paths:
+      - "packs/dev-team/**"
+      - ".github/workflows/pack-scrub-check.yml"
+  pull_request:
+    paths:
+      - "packs/dev-team/**"
+      - ".github/workflows/pack-scrub-check.yml"
+
+# Don't waste minutes on superseded pushes to the same ref.
+concurrency:
+  group: pack-scrub-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scrub-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Scrub-check the dev-team pack (no personal paths/secrets)
+        run: node --test packs/dev-team/scrub-check.test.mjs
