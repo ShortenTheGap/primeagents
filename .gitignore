@@ -1,0 +1,7 @@
+
+# graphify knowledge graph output
+graphify-out/
+
+# compiled python
+**/__pycache__/
+*.pyc

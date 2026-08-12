@@ -7,7 +7,7 @@ The AI inspects, judges, and informs — it does NOT auto-remove backgrounds.
 
 ## Step 1 — Run the Inspection Script
 
-Run `scripts/inspect-assets.py` on every uploaded image before doing anything else.
+Run `.claude/skills/epic-design/scripts/inspect-assets.py` on every uploaded image before doing anything else.
 The script outputs the format, mode, size, background type, and a recommendation
 for each image. Read its output carefully.
 
@@ -40,7 +40,7 @@ The script detects whether a background exists. YOU must decide whether it matte
 
 ## Step 3 — Resize to Depth-Appropriate Dimensions
 
-Run the resize step in `scripts/inspect-assets.py` or do it manually.
+Run the resize step in `.claude/skills/epic-design/scripts/inspect-assets.py` or do it manually.
 Never embed a large image when a smaller one is sufficient.
 
 | Depth | Role | Max Longest Edge |
