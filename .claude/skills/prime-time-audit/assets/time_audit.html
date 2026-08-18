@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEO Time Audit</title>
+<style>
+  :root{
+    --ink:#0d0d0d; --paper:#ffffff; --panel:#f6f5f2; --line:#e4e2dc;
+    --gold:#c9a227; --gold-deep:#a8871d; --mut:#6d6a63; --soft:#9b978e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--paper); line-height:1.5;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  /* Header */
+  header{background:var(--ink); color:#fff; padding:40px 0 44px;}
+  .brand{font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:var(--gold); font-weight:bold;}
+  header h1{font-size:40px; font-weight:bold; letter-spacing:-0.01em; margin-top:10px;}
+  header p.lede{max-width:640px; margin-top:12px; color:#c9c7c2; font-size:15px;}
+  header p.lede em{color:var(--gold); font-style:normal; font-weight:bold;}
+
+  /* Reclaim band */
+  .reclaim{background:var(--ink); color:#fff; border-top:1px solid #262626; position:sticky; top:0; z-index:50;}
+  .reclaim .wrap{display:flex; align-items:baseline; gap:32px; padding-top:14px; padding-bottom:14px; flex-wrap:wrap;}
+  .reclaim .big{font-size:34px; font-weight:bold; color:var(--gold); font-variant-numeric:tabular-nums;}
+  .reclaim .lbl{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#8f8d88;}
+  .reclaim .stat{display:flex; flex-direction:column;}
+  .reclaim .mid{font-size:22px; font-weight:bold; font-variant-numeric:tabular-nums;}
+
+  section{padding:48px 0;}
+  section+section{border-top:1px solid var(--line);}
+  .eyebrow{font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold-deep); font-weight:bold;}
+  h2{font-size:24px; margin-top:8px;}
+  .sub{color:var(--mut); font-size:14px; margin-top:6px; max-width:620px;}
+
+  /* Task table */
+  table{width:100%; border-collapse:collapse; margin-top:22px; font-size:13px;}
+  thead th{text-align:left; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); padding:0 8px 8px; border-bottom:2px solid var(--ink);}
+  tbody td{padding:6px 8px 6px 0; border-bottom:1px solid var(--line); vertical-align:middle;}
+  input[type=text], input[type=number], select{
+    width:100%; font-family:Arial, sans-serif; font-size:13px; padding:7px 8px;
+    border:1px solid transparent; background:transparent; border-radius:3px; color:var(--ink);
+  }
+  input:hover, select:hover{border-color:var(--line); background:#fff;}
+  input:focus, select:focus{outline:none; border-color:var(--gold); background:#fff;}
+  input[type=number]{width:70px; font-variant-numeric:tabular-nums;}
+  td.del{width:30px; text-align:center;}
+  .delbtn{border:none; background:none; color:var(--soft); cursor:pointer; font-size:15px; padding:4px;}
+  .delbtn:hover{color:var(--ink);}
+  .addrow{margin-top:14px; border:1px dashed var(--soft); background:none; color:var(--mut); padding:9px 18px; font-size:13px; cursor:pointer; border-radius:3px; font-family:Arial;}
+  .addrow:hover{border-color:var(--gold); color:var(--ink);}
+  .hint{font-size:12px; color:var(--soft); margin-top:10px;}
+
+  /* Analysis */
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px; margin-top:26px;}
+  .card{background:var(--panel); padding:22px; border-radius:4px;}
+  .card h3{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); margin-bottom:14px;}
+  .bar{display:grid; grid-template-columns:130px 1fr 42px; align-items:center; gap:10px; margin-bottom:9px; font-size:13px;}
+  .bar .track{height:9px; background:#e9e7e1; border-radius:99px; overflow:hidden;}
+  .bar .fill{height:100%; background:var(--ink); border-radius:99px; transition:width .3s;}
+  .bar .fill.gold{background:var(--gold);}
+  .bar .n{text-align:right; font-variant-numeric:tabular-nums; font-weight:bold;}
+  .savings{display:flex; justify-content:space-between; font-size:13px; padding:7px 0; border-bottom:1px solid var(--line);}
+  .savings:last-child{border-bottom:none; font-weight:bold;}
+  .savings .n{font-variant-numeric:tabular-nums;}
+
+  /* Lists */
+  .listwrap{margin-top:20px;}
+  .taskline{display:grid; grid-template-columns:1fr 70px 130px 150px; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:13px; align-items:baseline;}
+  .taskline .hrs{font-weight:bold; font-variant-numeric:tabular-nums; text-align:right;}
+  .taskline .tag{font-size:11px; color:var(--mut);}
+  .empty{color:var(--soft); font-size:13px; padding:14px 0; font-style:italic;}
+
+  /* Step 2 */
+  .plan{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; margin-top:26px;}
+  .planline{display:grid; grid-template-columns:22px 1fr 84px; gap:8px; align-items:center; padding:5px 0;}
+  .planline .num{color:var(--gold-deep); font-weight:bold; font-size:13px;}
+  .badge{font-size:12px; font-weight:bold; padding:2px 10px; border-radius:99px; background:#e9e7e1; color:var(--mut);}
+  .badge.ok{background:var(--gold); color:var(--ink);}
+  .hireline{display:grid; grid-template-columns:22px 1fr; gap:8px; padding:6px 0; align-items:start;}
+  .hireline .stack{display:grid; gap:4px;}
+
+  /* Footer / actions */
+  .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:6px;}
+  .btn{font-family:Arial; font-size:13px; padding:11px 22px; border-radius:3px; cursor:pointer; border:1px solid var(--ink); background:var(--ink); color:#fff; font-weight:bold;}
+  .btn.ghost{background:none; color:var(--ink);}
+  .btn:hover{border-color:var(--gold); }
+  .btn.ghost:hover{color:var(--gold-deep);}
+  footer{padding:36px 0 60px; color:var(--soft); font-size:12px;}
+  .savestate{font-size:12px; color:var(--soft); align-self:center;}
+
+  @media print{
+    .reclaim{position:static;}
+    .actions,.addrow,.delbtn,.hint{display:none !important;}
+    input,select{border:none !important; background:none !important; appearance:none;}
+    section{padding:24px 0;}
+    header{padding:24px 0;}
+  }
+  @media (max-width:720px){
+    .taskline{grid-template-columns:1fr 60px;}
+    .taskline .tag{display:none;}
+    header h1{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Prime</div>
+    <h1>CEO Time Audit</h1>
+    <p class="lede"><em>Awareness creates its own momentum.</em> Log every recurring task in your week, classify it, and watch the hours you can reclaim add up. We'll build your plan from this on our next call.</p>
+  </div>
+</header>
+
+<div class="reclaim">
+  <div class="wrap">
+    <div class="stat"><span class="big" id="rHours">0</span><span class="lbl">Hours / week you can reclaim</span></div>
+    <div class="stat"><span class="mid" id="rTotal">0</span><span class="lbl">Total hours logged</span></div>
+    <div class="stat"><span class="mid" id="rExec">0%</span><span class="lbl">Time in the CEO seat</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Step 1</div>
+    <h2>Where your week actually goes</h2>
+    <p class="sub">Be specific with tasks and honest with hours. A Friday look-back works, or fill it in a little each day. Hover the column names if you're unsure how to classify.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:26%">Specific task</th>
+          <th title="Your best estimate">Hrs/wk</th>
+          <th title="1-Admin: clerical, inbox, scheduling. 2-Technician: doing the craft/delivery work. 3-Manager: managing people and process. 4-Exec: only-the-CEO work.">Tier</th>
+          <th title="Does this task give you energy, drain it, or neither?">Energy</th>
+          <th title="X: eliminate, stop doing it altogether. D: delegate as-is. S: keep it, build a system. S+D: build the system, then hand it off. ---: keep doing it.">Cut / Delegate / Systemize</th>
+          <th title="Who should own this next?">New owner</th>
+          <th title="The SOP, template, or automation to build">System to create</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="taskBody"></tbody>
+    </table>
+    <button class="addrow" onclick="addTask()">+ Add a task</button>
+    <p class="hint">Your entries save in this browser automatically. Use Export below to send the file back to us.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Summary</div>
+    <h2>What the numbers say</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Hours by tier</h3>
+        <div id="tierBars"></div>
+      </div>
+      <div class="card">
+        <h3>Hours by energy</h3>
+        <div id="energyBars"></div>
+      </div>
+      <div class="card">
+        <h3>Low-hanging fruit</h3>
+        <div class="savings"><span>Current total hrs/week</span><span class="n" id="sTotal">0</span></div>
+        <div class="savings"><span>Immediate items to cut</span><span class="n" id="sCut">0</span></div>
+        <div class="savings"><span>Admin hours to delegate</span><span class="n" id="sAdmin">0</span></div>
+        <div class="savings"><span>Your new week</span><span class="n" id="sNew">0</span></div>
+        <div class="savings"><span>Hours reclaimed</span><span class="n" id="sSaved" style="color:var(--gold-deep)">0</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Off your plate</div>
+    <h2>Top tasks to get off your plate</h2>
+    <p class="sub">Everything that's admin work or drains your energy, biggest first.</p>
+    <div class="listwrap" id="offPlate"></div>
+
+    <div style="height:36px"></div>
+    <div class="eyebrow">Keep</div>
+    <h2>Tasks you should keep doing</h2>
+    <p class="sub">Manager and executive work, plus anything that gives you energy.</p>
+    <div class="listwrap" id="keepList"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Step 2</div>
+    <h2>Your action plan</h2>
+    <p class="sub">Define your ideal role, the first systems to build, and the next hires that free up your time. Draft it here; we'll pressure-test it together.</p>
+    <div class="plan">
+      <div class="card">
+        <h3>Most valuable activities <span class="badge" id="mvaBadge">0%</span></h3>
+        <div id="mvaRows"></div>
+      </div>
+      <div class="card">
+        <h3>First 3 systems to create</h3>
+        <div id="sysRows"></div>
+      </div>
+      <div class="card">
+        <h3>Next 3 positions to hire</h3>
+        <div id="hireRows"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Done?</div>
+    <h2>Send it back</h2>
+    <div style="height:14px"></div>
+    <div class="actions">
+      <button class="btn" onclick="exportJSON()">Export my audit (.json)</button>
+      <button class="btn ghost" onclick="window.print()">Print / save as PDF</button>
+      <button class="btn ghost" onclick="importJSON()">Import a saved audit</button>
+      <span class="savestate" id="saveState"></span>
+      <input type="file" id="fileIn" accept=".json" style="display:none">
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Prime AI · CEO Time Audit · Fill this out in as much detail as you can. We take it from there.</div></footer>
+
+<script>
+// ===== Injected by the prime-time-audit skill. null = blank audit. =====
+const AUDIT_DATA = /*__DATA__*/null/*__END__*/;
+// =======================================================================
+
+const TIERS = ["1-Admin","2-Technician","3-Manager","4-Exec"];
+const ENERGY = ["Gives Me Energy","Neutral","Takes My Energy"];
+const CDS = ["---","X","D","S","S+D"];
+const CDS_LABEL = {"---":"Keep as is","X":"Eliminate","D":"Delegate","S":"Systemize","S+D":"Systemize + Delegate"};
+
+let state = {
+  tasks: [],
+  mva: [{a:"",p:""},{a:"",p:""},{a:"",p:""},{a:"",p:""},{a:"",p:""}],
+  systems: [{s:"",cu:"Create"},{s:"",cu:"Create"},{s:"",cu:"Create"}],
+  hires: [{p:"",t:""},{p:"",t:""},{p:"",t:""}]
+};
+
+// ---- safe storage (localStorage in a normal browser; in-memory inside sandboxed previews)
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); document.getElementById('saveState').textContent = 'Saved locally'; }catch(e){} }
+};
+
+function load(){
+  if (AUDIT_DATA){ state = AUDIT_DATA; return; }
+  const raw = store.get('prime_time_audit');
+  if (raw){ try{ state = JSON.parse(raw); }catch(e){} }
+  if (!state.tasks.length) for(let i=0;i<5;i++) state.tasks.push(blankTask());
+}
+function persist(){ store.set('prime_time_audit', JSON.stringify(state)); }
+function blankTask(){ return {task:"",hrs:"",tier:"",energy:"",cds:"",owner:"",system:""}; }
+
+// ---- render task table
+function opt(list, sel, allowBlank){
+  let h = allowBlank ? `<option value=""></option>` : "";
+  return h + list.map(v=>`<option ${v===sel?'selected':''} value="${v}">${v}</option>`).join("");
+}
+function renderTasks(){
+  const tb = document.getElementById('taskBody');
+  tb.innerHTML = state.tasks.map((t,i)=>`<tr>
+    <td><input type="text" value="${esc(t.task)}" placeholder="e.g. Weekly payroll run" oninput="upd(${i},'task',this.value)"></td>
+    <td><input type="number" min="0" step="0.5" value="${t.hrs}" oninput="upd(${i},'hrs',this.value)"></td>
+    <td><select onchange="upd(${i},'tier',this.value)">${opt(TIERS,t.tier,true)}</select></td>
+    <td><select onchange="upd(${i},'energy',this.value)">${opt(ENERGY,t.energy,true)}</select></td>
+    <td><select onchange="upd(${i},'cds',this.value)">${opt(CDS,t.cds,true)}</select></td>
+    <td><input type="text" value="${esc(t.owner)}" oninput="upd(${i},'owner',this.value)"></td>
+    <td><input type="text" value="${esc(t.system)}" oninput="upd(${i},'system',this.value)"></td>
+    <td class="del"><button class="delbtn" title="Remove" onclick="delTask(${i})">×</button></td>
+  </tr>`).join("");
+}
+function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;"); }
+function upd(i,k,v){ state.tasks[i][k]=v; persist(); calc(); }
+function addTask(){ state.tasks.push(blankTask()); persist(); renderTasks(); }
+function delTask(i){ state.tasks.splice(i,1); persist(); renderTasks(); calc(); }
+
+// ---- analysis
+function calc(){
+  const tasks = state.tasks.filter(t=>t.task && +t.hrs>0);
+  const total = tasks.reduce((s,t)=>s+ +t.hrs,0);
+  const by = (key,val)=>tasks.filter(t=>t[key]===val).reduce((s,t)=>s+ +t.hrs,0);
+  const cut = by('cds','X');
+  const admin = by('tier','1-Admin');
+  const saved = cut + admin;
+  const execPct = total ? Math.round(by('tier','4-Exec')/total*100) : 0;
+
+  document.getElementById('rHours').textContent = fmt(saved);
+  document.getElementById('rTotal').textContent = fmt(total);
+  document.getElementById('rExec').textContent = execPct + "%";
+  document.getElementById('sTotal').textContent = fmt(total);
+  document.getElementById('sCut').textContent = fmt(cut);
+  document.getElementById('sAdmin').textContent = fmt(admin);
+  document.getElementById('sNew').textContent = fmt(total - saved);
+  document.getElementById('sSaved').textContent = fmt(saved);
+
+  bars('tierBars', TIERS.map(v=>[v.replace(/^\d-/,''), by('tier',v)]), total, false);
+  bars('energyBars', ENERGY.map(v=>[v, by('energy',v)]), total, true);
+
+  const off = tasks.filter(t=>t.tier==='1-Admin'||t.energy==='Takes My Energy').sort((a,b)=>b.hrs-a.hrs);
+  const keep = tasks.filter(t=>t.tier==='3-Manager'||t.tier==='4-Exec'||t.energy==='Gives Me Energy');
+  list('offPlate', off, 'Nothing here yet - classify your tasks above.');
+  list('keepList', keep, 'Nothing here yet - classify your tasks above.');
+}
+function fmt(n){ return (Math.round(n*10)/10).toString(); }
+function bars(id, rows, total, gold){
+  document.getElementById(id).innerHTML = rows.map(([l,n])=>{
+    const w = total? (n/total*100):0;
+    return `<div class="bar"><span>${l}</span><span class="track"><span class="fill ${gold&&l==='Gives Me Energy'?'gold':''}" style="width:${w}%"></span></span><span class="n">${fmt(n)}</span></div>`;
+  }).join("");
+}
+function list(id, rows, emptyMsg){
+  const el = document.getElementById(id);
+  el.innerHTML = rows.length ? rows.map(t=>`<div class="taskline">
+    <span>${esc(t.task)}</span><span class="hrs">${fmt(+t.hrs)} h</span>
+    <span class="tag">${esc(t.tier)}</span><span class="tag">${CDS_LABEL[t.cds]||''}${t.owner? ' → '+esc(t.owner):''}</span>
+  </div>`).join("") : `<div class="empty">${emptyMsg}</div>`;
+}
+
+// ---- step 2
+function renderPlan(){
+  document.getElementById('mvaRows').innerHTML = state.mva.map((m,i)=>`<div class="planline">
+    <span class="num">${i+1}.</span>
+    <input type="text" placeholder="Activity" value="${esc(m.a)}" oninput="state.mva[${i}].a=this.value;persist()">
+    <input type="number" min="0" max="100" placeholder="%" value="${m.p}" oninput="state.mva[${i}].p=this.value;persist();mvaCheck()">
+  </div>`).join("");
+  document.getElementById('sysRows').innerHTML = state.systems.map((s,i)=>`<div class="planline">
+    <span class="num">${i+1}.</span>
+    <input type="text" placeholder="System" value="${esc(s.s)}" oninput="state.systems[${i}].s=this.value;persist()">
+    <select onchange="state.systems[${i}].cu=this.value;persist()">${opt(["Create","Update"],s.cu,false)}</select>
+  </div>`).join("");
+  document.getElementById('hireRows').innerHTML = state.hires.map((h,i)=>`<div class="hireline">
+    <span class="num">${i+1}.</span>
+    <span class="stack">
+      <input type="text" placeholder="Position" value="${esc(h.p)}" oninput="state.hires[${i}].p=this.value;persist()">
+      <input type="text" placeholder="Top tasks to delegate" value="${esc(h.t)}" oninput="state.hires[${i}].t=this.value;persist()">
+    </span>
+  </div>`).join("");
+  mvaCheck();
+}
+function mvaCheck(){
+  const sum = state.mva.reduce((s,m)=>s+(+m.p||0),0);
+  const b = document.getElementById('mvaBadge');
+  b.textContent = sum + "%";
+  b.className = "badge" + (sum===100 ? " ok":"");
+}
+
+// ---- export / import
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'CEO-Time-Audit.json';
+  a.click();
+}
+function importJSON(){
+  const f = document.getElementById('fileIn');
+  f.onchange = ()=>{
+    const r = new FileReader();
+    r.onload = ()=>{ try{ state = JSON.parse(r.result); persist(); renderTasks(); renderPlan(); calc(); }catch(e){ alert('That file could not be read.'); } };
+    r.readAsText(f.files[0]);
+  };
+  f.click();
+}
+
+load(); renderTasks(); renderPlan(); calc();
+</script>
+</body>
+</html>

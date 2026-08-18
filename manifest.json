@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "generatedAt": "2026-08-18T15:01:29.487Z",
+  "version": 7,
+  "generatedAt": "2026-08-18T15:18:17.919Z",
   "files": [
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
@@ -121,6 +121,21 @@
       "path": ".claude/skills/loop-maker/templates/TRIGGER.md.tmpl",
       "sha256": "16cfc12c3617e615cfd1da3e3e1ccc2ddeec05c16da9f5ab6c2f56abffda9bab",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/TRIGGER.md.tmpl"
+    },
+    {
+      "path": ".claude/skills/prime-time-audit/assets/Time_Audit_Template.xlsx",
+      "sha256": "1b8a5a798d49b67515277b0c885029d41f3adc5401556a1a54571f4b92a2d8ce",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-time-audit/assets/Time_Audit_Template.xlsx"
+    },
+    {
+      "path": ".claude/skills/prime-time-audit/assets/time_audit.html",
+      "sha256": "6d8c3f34fb619c8d57b75dda7aeb779eaeda261f38f1bbe16d15e52d05a207e6",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-time-audit/assets/time_audit.html"
+    },
+    {
+      "path": ".claude/skills/prime-time-audit/SKILL.md",
+      "sha256": "a6ce1c0927122c73829f3d4f1cefbebc5ec97c6800f9c9cedb80acdda099f5e4",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-time-audit/SKILL.md"
     }
   ]
 }
