@@ -1,11 +1,31 @@
 {
-  "version": 5,
-  "generatedAt": "2026-07-07T17:13:08.747Z",
+  "version": 6,
+  "generatedAt": "2026-08-18T15:01:29.487Z",
   "files": [
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
       "sha256": "1866c321a1f20d429ffe7f9cedb919cef8195f439dff907c5b2d79b6ea144fd3",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/hello-prime/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/inbox-pipeline-audit/references/ideal-buyer-prompt.md",
+      "sha256": "fa4d0644e0c3fa3aaf68bb041707eaaee22f5a701edafb4e716a7e8f6c2d69c2",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/inbox-pipeline-audit/references/ideal-buyer-prompt.md"
+    },
+    {
+      "path": ".claude/skills/inbox-pipeline-audit/references/journal-entry-prompt.md",
+      "sha256": "3e527a4412a8b9939de192f3bfc793da17a8eea8339682c2e624e7b7bd295b79",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/inbox-pipeline-audit/references/journal-entry-prompt.md"
+    },
+    {
+      "path": ".claude/skills/inbox-pipeline-audit/references/nightmare-day-prompt.md",
+      "sha256": "24022da6a745fa020b3f7f4b9893e665fe44e5abc7626e10b5512bb0463b6b7a",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/inbox-pipeline-audit/references/nightmare-day-prompt.md"
+    },
+    {
+      "path": ".claude/skills/inbox-pipeline-audit/SKILL.md",
+      "sha256": "0dc99acfd8f8829fd1c4330448f822a9f3b3031aadba920d94ad66744393318b",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/inbox-pipeline-audit/SKILL.md"
     },
     {
       "path": ".claude/skills/loop-maker/LICENSE",
