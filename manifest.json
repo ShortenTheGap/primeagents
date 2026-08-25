@@ -1,7 +1,32 @@
 {
-  "version": 7,
-  "generatedAt": "2026-08-18T15:18:17.919Z",
+  "version": 8,
+  "generatedAt": "2026-08-25T15:59:48.089Z",
   "files": [
+    {
+      "path": ".claude/agents/content-agent.md",
+      "sha256": "bab2a5de51e08234b35b8becacfd0a326fd4369ff4a402d37aa3c91aff9fbcc7",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/agents/content-agent.md"
+    },
+    {
+      "path": ".claude/agents/ghl-agent.md",
+      "sha256": "10f7345112ecd74cf536b55c36ccafa67f89a118e30bc1ef1dab0a4e1e3a7487",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/agents/ghl-agent.md"
+    },
+    {
+      "path": ".claude/agents/n8n-agent.md",
+      "sha256": "40588240a3f38cb9de72ca7e322d4ea0de5ce670844201d706f53237574ff133",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/agents/n8n-agent.md"
+    },
+    {
+      "path": ".claude/agents/research-agent.md",
+      "sha256": "b872b32347c80c75444cc9cb12aac43980475c5eda9ee8ae887861c805480c7b",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/agents/research-agent.md"
+    },
+    {
+      "path": ".claude/commands/setup.md",
+      "sha256": "0a01b3fbb36d621930cc5c9386a7900eee6d6a68f1f02cccd5a5c5aeb9f24402",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/commands/setup.md"
+    },
     {
       "path": ".claude/skills/hello-prime/SKILL.md",
       "sha256": "1866c321a1f20d429ffe7f9cedb919cef8195f439dff907c5b2d79b6ea144fd3",
@@ -123,6 +148,16 @@
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/loop-maker/templates/TRIGGER.md.tmpl"
     },
     {
+      "path": ".claude/skills/prime-3f-framework/references/task-libraries.md",
+      "sha256": "30b4b011587d181be6f1bf6b6cc5546ca28376429d416af8e74672dcaa7545f9",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-3f-framework/references/task-libraries.md"
+    },
+    {
+      "path": ".claude/skills/prime-3f-framework/SKILL.md",
+      "sha256": "0db1eb7addf6e2901b6388cdad6607bd4d34316512f18b975cac0d8bc939b1f2",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-3f-framework/SKILL.md"
+    },
+    {
       "path": ".claude/skills/prime-time-audit/assets/Time_Audit_Template.xlsx",
       "sha256": "1b8a5a798d49b67515277b0c885029d41f3adc5401556a1a54571f4b92a2d8ce",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-time-audit/assets/Time_Audit_Template.xlsx"
@@ -136,6 +171,11 @@
       "path": ".claude/skills/prime-time-audit/SKILL.md",
       "sha256": "a6ce1c0927122c73829f3d4f1cefbebc5ec97c6800f9c9cedb80acdda099f5e4",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/prime-time-audit/SKILL.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "97d43db7deebe983022103739fa07817c7db8e2ae51bf37e41149fad5820c432",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/CLAUDE.md"
     }
   ]
 }
