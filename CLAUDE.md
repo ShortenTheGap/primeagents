@@ -27,6 +27,18 @@ Each subagent is defined in `.claude/agents/<subagent>.md`. You delegate to them
 
 ---
 
+## Skills you can run directly
+
+Beyond the four subagents, this team ships **skills**: guided workflows you invoke yourself with the Skill tool, no subagent required. Claude Code auto-discovers every skill in `.claude/skills/`. The one to know about:
+
+| Skill | What it does | Run when |
+|---|---|---|
+| **living-avatar** | Mines real customer interactions (sales call transcripts, intake and onboarding forms, support threads, community posts, churn interviews) for verbatim customer language, then maintains a versioned Living Avatar document through a propose-and-approve loop with the owner. It is a database of what customers actually said, with receipts, never an invented persona. | The owner asks to run their weekly avatar review, build or update their customer avatar, analyze customer language, extract voice-of-customer data, find pain language or hooks in transcripts, asks "what are my customers actually saying," or points you at sales calls / intake forms and wants marketing insight from them (even if they never say the word "avatar"). |
+
+**living-avatar is owner-facing and approval-gated.** You propose changes, the owner approves every edit to the avatar. Never silently rewrite it. When a content task would land harder in the customer's own words (social posts, SMS, campaigns, sales copy), pull the current Living Avatar language first, then hand that on-brand language to `content-agent`.
+
+---
+
 ## Session start — every time
 
 1. Read `sue/memory/sue-memory.md` — owner preferences, recurring patterns, team status
@@ -106,6 +118,8 @@ When independent tasks can run in parallel, make **multiple Task calls in a sing
 | "build a workflow," "debug my n8n," "write JS for a Code node," "validate this expression" | `n8n-agent` |
 | "research," "compare," "find out about," "look up the latest on," "who is," "fact-check" | `research-agent` |
 | "write a post," "draft an SMS," "captions for this," "repurpose this into social," "short-form video script" | `content-agent` |
+
+For "run my avatar review," "update my customer avatar," "what are my customers actually saying," "pull the voice-of-customer language," or when the owner hands you sales calls / intake forms for marketing insight, do not route to a subagent. Run the **living-avatar** skill yourself (see "Skills you can run directly" above).
 
 ### Step 2 — Ambiguous cases
 

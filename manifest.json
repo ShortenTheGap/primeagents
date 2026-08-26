@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "generatedAt": "2026-08-25T15:59:48.089Z",
+  "version": 9,
+  "generatedAt": "2026-08-26T07:04:28.506Z",
   "files": [
     {
       "path": ".claude/agents/content-agent.md",
@@ -51,6 +51,16 @@
       "path": ".claude/skills/inbox-pipeline-audit/SKILL.md",
       "sha256": "0dc99acfd8f8829fd1c4330448f822a9f3b3031aadba920d94ad66744393318b",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/inbox-pipeline-audit/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/living-avatar/assets/avatar-template.md",
+      "sha256": "5a545694e1735596e46cf0cbaf8e66d6bc78725e83402a8cb0c5851691ed8145",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/living-avatar/assets/avatar-template.md"
+    },
+    {
+      "path": ".claude/skills/living-avatar/SKILL.md",
+      "sha256": "8027c9f28232b82a55ca227e623f6228803cf3b7f738f09a5b3c1adb4605fc28",
+      "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/.claude/skills/living-avatar/SKILL.md"
     },
     {
       "path": ".claude/skills/loop-maker/LICENSE",
@@ -174,7 +184,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "97d43db7deebe983022103739fa07817c7db8e2ae51bf37e41149fad5820c432",
+      "sha256": "a58de0982f509eb4b10dfd4e3bff8ca7c4a26fcd1ddb7b4b790103f2cbc93679",
       "url": "https://raw.githubusercontent.com/ShortenTheGap/primeagents/main/CLAUDE.md"
     }
   ]
